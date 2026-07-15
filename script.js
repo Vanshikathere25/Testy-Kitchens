@@ -3,9 +3,9 @@ let count = 0;
 function addCart() {
     alert("Item Added To Cart Successfully!");
     
-    // कार्ट काउंट को 1 बढ़ाएं
+    // कार्ट संख्या बढ़ाएं
     count = count + 1;
     
-    // स्क्रीन पर दिख रहे नंबर को अपडेट करें
+    // हेडर में लाइव नंबर बदलें
     document.getElementById("cart-count").innerText = count;
 }
