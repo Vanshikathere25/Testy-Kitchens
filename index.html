@@ -3,35 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tasty Kitchens</title>
-    <!-- आइकॉन के लिए FontAwesome CSS -->
+    <title>Tasty Kitchens - Menu</title>
+    <!-- Icons के लिए FontAwesome -->
     <link rel="stylesheet" href="https://cloudflare.com">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- प्रोफेशनल हेडर और कार्ट आइकॉन -->
+    <!-- प्रीमियम हेडर -->
     <header class="navbar">
-        <div class="logo">Tasty Kitchens</div>
+        <div class="logo"><i class="fas fa-utensils"></i> Tasty Kitchens</div>
         <div class="cart-icon-container">
             <i class="fas fa-shopping-cart"></i>
             <span id="cart-count">0</span>
         </div>
     </header>
 
-    <!-- मेनू सेक्शन -->
-    <main class="menu-container">
-        <!-- फूड कार्ड -->
+    <!-- मुख्य हेडिंग -->
+    <div class="menu-title">
+        <h1>Our Delicious Menu</h1>
+        <p>Freshly prepared food delivered straight to your table</p>
+    </div>
+
+    <!-- मेनू ग्रिड सेक्शन (सारे आइटम्स यहाँ हैं) -->
+    <main class="menu-grid">
+        
+        <!-- Item 1: Veg Pizza -->
         <div class="card">
             <div class="image-container">
                 <img src="https://unsplash.com" alt="Veg Pizza">
             </div>
             <div class="card-info">
-                <h2>Veg Pizza</h2>
-                <p class="price">₹199</p>
-                <button onclick="addCart()">Add to Cart</button>
+                <h2>Veg Cheese Pizza</h2>
+                <p class="description">Loaded with fresh veggies and extra mozzarella cheese.</p>
+                <div class="card-footer">
+                    <span class="price">₹199</span>
+                    <button onclick="addCart()">Add</button>
+                </div>
             </div>
         </div>
+
+        <!-- Item 2: Cheese Burger -->
+        <div class="card">
+            <div class="image-container">
+                <img src="https://unsplash.com" alt="Cheese Burger">
+            </div>
+            <div class="card-info">
+                <h2>Crispy Burger</h2>
+                <p class="description">Crispy veg patty filled with cheesy sauce and veggies.</p>
+                <div class="card-footer">
+                    <span class="price">₹99</span>
+                    <button onclick="addCart()">Add</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Item 3: White Sauce Pasta -->
+        <div class="card">
+            <div class="image-container">
+                <img src="https://unsplash.com" alt="Pasta">
+            </div>
+            <div class="card-info">
+                <h2>Creamy Pasta</h2>
+                <p class="description">Penne pasta tossed in rich, creamy white Alfredo sauce.</p>
+                <div class="card-footer">
+                    <span class="price">₹149</span>
+                    <button onclick="addCart()">Add</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Item 4: French Fries -->
+        <div class="card">
+            <div class="image-container">
+                <img src="https://unsplash.com" alt="French Fries">
+            </div>
+            <div class="card-info">
+                <h2>Peri Peri Fries</h2>
+                <p class="description">Golden crispy French fries sprinkled with spicy peri-peri.</p>
+                <div class="card-footer">
+                    <span class="price">₹79</span>
+                    <button onclick="addCart()">Add</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Item 5: Choco Lava Cake -->
+        <div class="card">
+            <div class="image-container">
+                <img src="https://unsplash.com" alt="Lava Cake">
+            </div>
+            <div class="card-info">
+                <h2>Choco Lava Cake</h2>
+                <p class="description">Warm chocolate cake with a melt-in-the-mouth center.</p>
+                <div class="card-footer">
+                    <span class="price">₹89</span>
+                    <button onclick="addCart()">Add</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Item 6: Cold Drink -->
+        <div class="card">
+            <div class="image-container">
+                <img src="https://unsplash.com" alt="Cold Drink">
+            </div>
+            <div class="card-info">
+                <h2>Chilled Coca Cola</h2>
+                <p class="description">Refreshing iced cold beverage to complement your meal.</p>
+                <div class="card-footer">
+                    <span class="price">₹40</span>
+                    <button onclick="addCart()">Add</button>
+                </div>
+            </div>
+        </div>
+
     </main>
 
     <script src="script.js"></script>
