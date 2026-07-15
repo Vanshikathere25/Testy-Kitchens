@@ -1,65 +1,126 @@
-/* सुंदर फॉन्ट और बैकग्राउंड */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f8f9fa;
+* {
     margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f6fa;
     min-height: 100vh;
+    padding-top: 100px; /* हेडर के नीचे जगह के लिए */
 }
 
-/* मुख्य हेडिंग */
-h1 {
-    color: #ff4757;
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+/* प्रीमियम नेविगेशन बार */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.6rem;
     font-weight: 700;
+    color: #ff4757;
 }
 
-/* प्रोफेशनल फूड कार्ड */
+/* लाइव कार्ट काउंटर स्टाइल */
+.cart-icon-container {
+    position: relative;
+    cursor: pointer;
+    font-size: 1.4rem;
+    color: #2f3542;
+}
+
+#cart-count {
+    position: absolute;
+    top: -10px;
+    right: -12px;
+    background-color: #ff4757;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 2px 7px;
+    border-radius: 50%;
+}
+
+/* कार्ड लेआउट */
+.menu-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
 .card {
     background: #ffffff;
-    border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    padding: 25px;
-    width: 300px;
-    text-align: center;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+    width: 320px;
     transition: transform 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-5px); /* माउस ले जाने पर कार्ड ऊपर उठेगा */
+    transform: translateY(-8px);
 }
 
-/* आइटम का नाम और प्राइस */
-.card h2 {
+/* इमेज को सेट करना */
+.image-container {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-info h2 {
     color: #2f3542;
-    margin: 10px 0;
+    font-size: 1.4rem;
+    margin-bottom: 8px;
 }
 
 .price {
     font-size: 1.2rem;
     color: #2ed573;
-    font-weight: bold;
-    margin-bottom: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
 }
 
-/* मॉडर्न बटन */
+/* बटन एनीमेशन के साथ */
 button {
     background-color: #ff4757;
     color: white;
     border: none;
-    padding: 12px 24px;
+    padding: 12px;
     font-size: 1rem;
     font-weight: 600;
-    border-radius: 8px;
+    border-radius: 10px;
     cursor: pointer;
     width: 100%;
-    transition: background 0.2s ease;
+    transition: background 0.2s ease, transform 0.1s ease;
 }
 
 button:hover {
-    background-color: #e84118; /* माउस ले जाने पर डार्क कलर */
+    background-color: #e84118;
+}
+
+button:active {
+    transform: scale(0.98);
 }
